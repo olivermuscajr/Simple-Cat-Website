@@ -19,25 +19,23 @@
           <a href="#"><img src="images/logo.svg" alt="Friskay logo" /></a>
           <div class="divider hide-mobile"></div>
           <a href="#" class="home hide-mobile">Home</a>
-          <nav>
-            <a href="#" class="menu-open hide-desktop">
-              <img src="images/menu.svg" alt="Open menu" />
-            </a>
-            <ul>
-              <li>
-                <a href="#" class="menu-close">
-                  <img src="images/close.svg" alt="Close menu" />
-                </a>
-                <ul>
-                  <li><a href="#">Our Food</a></li>
-                  <li><a href="#">Ingredients</a></li>
-                  <li><a href="#">Studies</a></li>
-                  <li><a href="#">FAQ</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
         </div>
+        <nav>
+          <a href="#" class="menu-open hide-desktop">
+            <img src="images/menu.svg" alt="Open menu" />
+          </a>
+          <ul>
+            <li class="hide-desktop">
+              <a href="#" class="menu-close">
+                <img src="images/close.svg" alt="Close menu" />
+              </a>
+            </li>
+            <li><a href="#">Our Food</a></li>
+            <li><a href="#">Ingredients</a></li>
+            <li><a href="#">Studies</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </nav>
       </header>
       <!-- hotdog -->
       <main>
@@ -55,10 +53,24 @@
       <div class="cat-container">
         <div class="cat">
           <img src="images/cat.png" alt="Cat illustration" />
-          <div class="inner-cirlce"></div>
-          <div class="outer-cirlce"></div>
+          <div class="inner-circle"></div>
+          <div class="outer-circle"></div>
         </div>
       </div>
     </div>
+
+    <script>
+      let menu = document.querySelector("nav ul");
+      let menuBtn = document.querySelector(".menu-open");
+      let closeBtn = document.querySelector(".menu-close");
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.add("open");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        menu.classList.remove("open");
+      });
+    </script>
   </body>
 </html>
